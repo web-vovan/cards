@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+:root {
+  --paper: #f4f1ea;
+  --ink: #1c1915;
+  --card: #fffdf8;
+  --muted: #6f675e;
+  --line: #e4ddd2;
+  --pass: #1d6b45;
+  --pass-ink: #f4f1ea;
+  --fail: #8d3a2f;
+  --fail-ink: #fffdf8;
+  --accent: #8a5a2a;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #12110f;
+    --ink: #f4efe6;
+    --card: #1c1a17;
+    --muted: #b3aa9e;
+    --line: #2e2a25;
+    --pass: #8fcead;
+    --pass-ink: #122018;
+    --fail: #f0a497;
+    --fail-ink: #2a1210;
+    --accent: #e2b07a;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --font-serif: 'Iowan Old Style', Palatino, Georgia, serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-pass: var(--pass);
+  --color-pass-ink: var(--pass-ink);
+  --color-fail: var(--fail);
+  --color-fail-ink: var(--fail-ink);
+  --color-accent: var(--accent);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input {
+  font: inherit;
+}
